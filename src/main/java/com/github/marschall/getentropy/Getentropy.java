@@ -81,8 +81,8 @@ final class Getentropy {
     return tempFile;
   }
 
-  private static final int EFAULT = 1;
-  private static final int EIO = 14;
+  private static final int EFAULT = 14;
+  private static final int EIO = 5;
   private static final int EINVAL = 22;
 
   private Getentropy() {
