@@ -178,8 +178,9 @@
           <appendAssemblyId>false</appendAssemblyId>
           <archive>
             <manifestEntries>
-              <Name>com/github/marschall/getrandom/</Name>
+              <Name>com/github/marschall/getentropy/</Name>
               <Sealed>true</Sealed>
+              <Multi-Release>true</Multi-Release>
             </manifestEntries>
           </archive>
           <descriptors>
