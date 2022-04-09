@@ -10,7 +10,7 @@ import java.security.SecureRandom;
 
 import org.junit.jupiter.api.Test;
 
-class GetentropyProviderTests {
+class GetentropyProviderIT {
 
   @Test
   void getrandom() throws GeneralSecurityException {

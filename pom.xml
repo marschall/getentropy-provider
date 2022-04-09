@@ -116,6 +116,17 @@
         </configuration>
       </plugin>
       <plugin>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <artifactId>maven-javadoc-plugin</artifactId>
         <configuration>
           <links>
@@ -178,8 +189,9 @@
           <appendAssemblyId>false</appendAssemblyId>
           <archive>
             <manifestEntries>
-              <Name>com/github/marschall/getrandom/</Name>
-              <Sealed>true</Sealed>
+              <Multi-Release>true</Multi-Release>
+              <!-- <Name>com/github/marschall/getrandom/</Name> -->
+              <!-- <Sealed>true</Sealed> -->
             </manifestEntries>
           </archive>
           <descriptors>
@@ -236,6 +248,10 @@
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>2.8.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-failsafe-plugin</artifactId>
+          <version>2.22.2</version>
         </plugin>
         <plugin>
           <artifactId>maven-gpg-plugin</artifactId>
@@ -331,9 +347,10 @@
             </configuration>
           </plugin>
           <plugin>
-            <artifactId>maven-surefire-plugin</artifactId>
+            <artifactId>maven-failsafe-plugin</artifactId>
             <configuration>
               <forkMode>once</forkMode>
+              <!-- -Djava.security.debug=jca -->
               <argLine>
                 -Xcheck:jni
                 -Djava.library.path=${project.build.directory}/nar/${project.artifactId}-${project.version}-${nar.aol}-jni/lib/${nar.aol}/jni
@@ -374,9 +391,10 @@
             </executions>
           </plugin>
           <plugin>
-            <artifactId>maven-surefire-plugin</artifactId>
+            <artifactId>maven-failsafe-plugin</artifactId>
             <configuration>
               <forkMode>once</forkMode>
+              <!-- -Djava.security.debug=jca -->
               <argLine>
                 -Xcheck:jni
                 -Djava.library.path=${project.build.directory}/nar/${project.artifactId}-${project.version}-${nar.aol}-jni/lib/${nar.aol}/jni

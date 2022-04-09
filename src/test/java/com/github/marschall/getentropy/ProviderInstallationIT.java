@@ -6,7 +6,7 @@ import java.security.Security;
 
 import org.junit.jupiter.api.Test;
 
-class ProviderInstallationTests {
+class ProviderInstallationIT {
 
   @Test
   void getProvider() {

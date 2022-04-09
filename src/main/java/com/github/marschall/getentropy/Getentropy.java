@@ -10,10 +10,12 @@ import java.nio.file.Path;
 import java.util.Objects;
 
 final class Getentropy {
+  
+  private static final String VERSION;
 
   static {
-    String version = getVersion();
-    String libraryName = "getentropy-provider-" + version;
+    VERSION = readVersion();
+    String libraryName = "getentropy-provider-" + VERSION;
     try {
       Runtime.getRuntime().loadLibrary(libraryName);
     } catch (UnsatisfiedLinkError e) {
@@ -34,7 +36,7 @@ final class Getentropy {
     }
   }
 
-  private static String getVersion() {
+  private static String readVersion() {
     String fileName = "getentropy-provider.version";
     try (InputStream stream = Getentropy.class.getClassLoader().getResourceAsStream(fileName)) {
       if (stream == null) {
@@ -53,6 +55,10 @@ final class Getentropy {
     } catch (IOException e) {
       throw new AssertionError("could not load file: " + fileName, e);
     }
+  }
+
+  static String getVersion() {
+    return VERSION;
   }
 
   private static Path extractLibrary(String fileName) {
