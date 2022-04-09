@@ -30,6 +30,8 @@ The provider can be configured in two different ways
 
 For best startup performance it is recommended to extract the .so from the JAR and add it to a folder present in the `LD_LIBRARY_PATH` environment variable or the `java.library.path` system property. Otherwise this library will extract the .so to a temporary folder the first time it is called.
 
+We only ship `.so` files for Linux AMD64, other platforms like macOS and AArch64 are supported but you need to compile from source.
+
 ### Programmatic Configuration
 
 The provider can be registered programmatically using
