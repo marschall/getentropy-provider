@@ -23,6 +23,9 @@ public final class GetentropyProvider extends Provider {
 
   private static final long serialVersionUID = 1L;
 
+  /**
+   * Default constructor.
+   */
   public GetentropyProvider() {
     super(NAME, Getentropy.getVersion(), "getentropy (SecureRandom)");
     this.put("SecureRandom." + GETENTROPY, GetentropySecureRandom.class.getName());
