@@ -4,7 +4,7 @@ import java.security.Provider;
 
 /**
  * A security provider that installs one random number generation
- * algorithm that use the <a href="https://man7.org/linux/man-pages/man3/getentropy.3.html">getentropy()</a>
+ * algorithm that use the <a href="https://man.openbsd.org/OpenBSD-current/man2/getentropy.2">getentropy()</a>
  * system call.
  *
  * @see <a href="https://docs.oracle.com/en/java/javase/17/security/howtoimplaprovider.html">How to Implement a Provider in the Java Cryptography Architecture</a>

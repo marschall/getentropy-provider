@@ -190,8 +190,6 @@
           <archive>
             <manifestEntries>
               <Multi-Release>true</Multi-Release>
-              <!-- <Name>com/github/marschall/getrandom/</Name> -->
-              <!-- <Sealed>true</Sealed> -->
             </manifestEntries>
           </archive>
           <descriptors>
