@@ -1,4 +1,4 @@
-# getrandom() SecureRandomSPI [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.marschall/getentropy-provider/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.marschall/getentropy-provider)  [![Javadocs](https://www.javadoc.io/badge/com.github.marschall/getentropy-provider.svg)](https://www.javadoc.io/doc/com.github.marschall/getentropy-provider)
+# getentropy() SecureRandomSPI [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.marschall/getentropy-provider/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.marschall/getentropy-provider)  [![Javadocs](https://www.javadoc.io/badge/com.github.marschall/getentropy-provider.svg)](https://www.javadoc.io/doc/com.github.marschall/getentropy-provider)
 
 A `SecureRandomSPI` that makes [getentropy()](https://man.openbsd.org/OpenBSD-current/man2/getentropy.2) system call available to `SecureRandom`.
 
@@ -66,7 +66,7 @@ security.provider.N=getentropy
 
 This can be done [per JVM installation](https://docs.oracle.com/javase/9/security/howtoimplaprovider.htm#GUID-831AA25F-F702-442D-A2E4-8DA6DEA16F33) or [per JVM Instance](https://dzone.com/articles/how-override-java-security).
 
-The provider uses the ServiceLoader mechanism therefore using the `getrandom` string is enough, there is no need to use the fully qualified class name.
+The provider uses the ServiceLoader mechanism therefore using the `getentropy` string is enough, there is no need to use the fully qualified class name.
 
 Note that for this to work the provider JAR needs to be in the class path or module path.
 
